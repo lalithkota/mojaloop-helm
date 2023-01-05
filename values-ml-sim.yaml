@@ -310,8 +310,8 @@ defaults:
 
     backend:
       image:
-        repository: mojaloop/mojaloop-simulator
-        tag: v13.0.1
+        repository: lalithkota/mojaloop-simulator
+        tag: v14.0.0-gettransfer
         pullPolicy: IfNotPresent
       <<: *defaultProbes
       env:

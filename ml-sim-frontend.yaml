@@ -21,9 +21,15 @@ spec:
           ports:
             - containerPort: 8080
           env:
-          - name: BACKEND_TEST_URL
-            value: "https://ml-dfsp1-dev.openg2p.mosip.net/api/test"
-          - name: BACKEND_SIMULATOR_URL
+          - name: BACKEND_TEST_URL_PROTO
+            value: "https"
+          - name: BACKEND_TEST_URL_HOST
+            value: "ml-dfsp1-dev.openg2p.mosip.net"
+          - name: BACKEND_TEST_URL_PORT
+            value: "443"
+          - name: BACKEND_TEST_URL_PATH
+            value: "/api/test"
+          - name: BACKEND_SIM_URL
             value: "https://ml-dfsp1-dev.openg2p.mosip.net/api/sim"
 ---
 apiVersion: v1
@@ -64,10 +70,15 @@ spec:
           ports:
             - containerPort: 8080
           env:
-          env:
-          - name: BACKEND_TEST_URL
-            value: "https://ml-dfsp2-dev.openg2p.mosip.net/api/test"
-          - name: BACKEND_SIMULATOR_URL
+          - name: BACKEND_TEST_URL_PROTO
+            value: "https"
+          - name: BACKEND_TEST_URL_HOST
+            value: "ml-dfsp2-dev.openg2p.mosip.net"
+          - name: BACKEND_TEST_URL_PORT
+            value: "443"
+          - name: BACKEND_TEST_URL_PATH
+            value: "/api/test"
+          - name: BACKEND_SIM_URL
             value: "https://ml-dfsp2-dev.openg2p.mosip.net/api/sim"
 ---
 apiVersion: v1
